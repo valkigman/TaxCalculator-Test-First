@@ -11,4 +11,7 @@ describe('Tax calculator function', function(){
     it('third tax bracket', function(){
         assert.equal(taxCalc(40000), 16000, 'taxes on 40000 = 16000' );
     })
+    it('limiting condition', function(){
+        assert.equal(taxCalc(-10000), -1, 'Negative input = -1' );
+    })
 })
